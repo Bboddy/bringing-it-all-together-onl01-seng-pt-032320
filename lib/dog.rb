@@ -81,7 +81,7 @@ class Dog
     sql = "SELECT * FROM dogs WHERE name = ? AND breed = ? LIMIT 1"
     
     if DB[:conn].execute(sql,name: name,breed: name) == nil
-      return DB[:conn].execute(sql,name,breed)
+      return DB[:conn].execute(sql,name: name,breed: name)
     else
       Dog.create(name: name, breed: breed)
     end
