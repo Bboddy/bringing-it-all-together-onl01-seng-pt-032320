@@ -78,7 +78,9 @@ class Dog
   end
   
   def self.find_or_create_by(name:, breed:)
-    if Dog.find_by_name(name:).breed = breed:
+    sql = "SELECT * FROM dogs WHERE name = ? AND breed = ?"
+    
+    if 
       return Dog.find_by_name(name:)
     else
       Dog.create(name:, breed:)
