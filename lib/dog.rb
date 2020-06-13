@@ -83,7 +83,7 @@ class Dog
     if k9 = DB[:conn].execute(sql,name,breed) == nil
       dog = Dog.new(id: k9[0][0], name: k9[0][1], breed: k9[0][2])
     else
-      dog = Dog.create(name: name, breed: breed)
+      dog = self.create(name: name, breed: breed)
     end
     dog
   end
