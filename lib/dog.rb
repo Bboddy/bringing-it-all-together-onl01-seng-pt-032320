@@ -77,4 +77,5 @@ class Dog
     end.first
   end
   
+  def self.find_by
 end
