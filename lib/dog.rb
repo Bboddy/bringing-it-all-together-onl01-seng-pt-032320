@@ -81,9 +81,10 @@ class Dog
     sql = "SELECT * FROM dogs WHERE name = ? AND breed = ? LIMIT 1"
     
     if k9 = DB[:conn].execute(sql,name,breed).empty?
-      dog = Dog.new(id: k9[0][0], name: k9[0][1], breed: k9[0][2])
-    else
       dog = self.create(name: name, breed: breed)
+    else
+
+      dog = Dog.new(id: k9[0][0], name: k9[0][1], breed: k9[0][2])
     end
     dog
   end
