@@ -83,7 +83,7 @@ class Dog
     if DB[:conn].execute(sql,name,breed) = ""
       return DB[:conn].execute(sql,name,breed)
     else
-      Dog.create(name:, breed:)
+      Dog.create(name: name, breed: breed)
     end
   end
 end
